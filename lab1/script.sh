@@ -65,6 +65,6 @@ echo "Recent login attempts - command: sudo journalctl -u ssh --since "1 day ago
 sudo journalctl -u ssh --since "1 day ago"
 echo "Shutdown/reboot history - command: last -x | grep -E 'shutdown|reboot'"
 last -x | grep -E 'shutdown|reboot'
-echo "Installed software packages - command: dpkg -l"
+echo "Installed software packages - command: dpkg -l | tail -n 5"
 dpkg -l
 
