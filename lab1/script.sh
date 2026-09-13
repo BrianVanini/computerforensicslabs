@@ -49,12 +49,12 @@ echo "Root owned SUID files - command: sudo find / -user root -perm -4000 -type 
 sudo find / -user root -perm -4000 -type f 2>/dev/null
 
 echo "--Processes and Open Files--"
-echo "Processes - command: ps aux"
-ps aux
-echo "Files opened by netcat - command: sudo lsof -c nc"
-sudo lsof -c nc
-echo "Open and unlinked files - command: sudo lsof +L1"
-sudo lsof +L1
+echo "Processes - command: ps aux | tail -n 5"
+ps aux | tail -n 5
+echo "Files opened by netcat - command: sudo lsof -c nc | tail -n 5"
+sudo lsof -c nc | tail -n 5
+echo "Open and unlinked files - command: sudo lsof +L1 | tail -n 5"
+sudo lsof +L1 | tail -n 5
 
 echo "--Other--"
 echo "File in home dir modified < 1 day - command: find ~ -maxdepth 1 -mtime -1 -type f" 
