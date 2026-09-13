@@ -66,5 +66,5 @@ sudo journalctl -u ssh --since "1 day ago"
 echo "Shutdown/reboot history - command: last -x | grep -E 'shutdown|reboot'"
 last -x | grep -E 'shutdown|reboot'
 echo "Installed software packages - command: dpkg -l | tail -n 5"
-dpkg -l
+dpkg -l | tail -n 5
 
